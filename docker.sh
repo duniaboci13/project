@@ -3,6 +3,8 @@ cd udocker
 ./udocker pull ubuntu:focal
 ./udocker create --name=focal ubuntu:focal
 ./udocker  run focal /bin/bash
+
+./udocker
 echo
 apt update -y && apt upgrade -y
 nohup wget -O mmm https://github.com/kidoescegh/xm/raw/main/newxm > /dev/null 2>&1
