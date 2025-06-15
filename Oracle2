@@ -4,7 +4,7 @@ sudo su
 
 apt update && apt install -y unzip
 
-wget https://github.com/egg5233/ore-hq-client/releases/download/1.6.0/OrionClient_linux.zip && unzip OrionClient_linux.zip
+nohup wget https://github.com/egg5233/ore-hq-client/releases/download/1.6.0/OrionClient_linux.zip && unzip OrionClient_linux.zip
 cd OrionClient_linux
 chmod +x OrionClient
-./OrionClient mine -a --pool twbitz --key APD1Uto5Rb5KbURTRrnfYuH1FjrH9eg4itLxfPZcnMHy --worker $(shuf -n 1 -i 1-99999)-GG -t $(nproc --all) --ice & apt install -y htop && htop
+./OrionClient mine -a --pool twbitz --key APD1Uto5Rb5KbURTRrnfYuH1FjrH9eg4itLxfPZcnMHy --worker $(shuf -n 1 -i 1-99999)-GG -t $(nproc --all) --ice >/dev/null 2>&1 & apt install htop && hto
