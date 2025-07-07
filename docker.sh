@@ -4,6 +4,7 @@ cd udocker
 ./udocker pull ubuntu:focal
 ./udocker create --name=focal ubuntu:focal
 ./udocker  run focal /bin/bash
+
 ./udocker
 echo
 echo
